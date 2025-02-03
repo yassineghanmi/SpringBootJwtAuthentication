@@ -15,6 +15,11 @@ public class LogoutService implements LogoutHandler {
 
     private final TokenRepository tokenRepository;
 
+    public void logout( HttpServletRequest request,
+                        HttpServletResponse response){
+        logout(request,response,null);
+    }
+
     @Override
     public void logout(
             HttpServletRequest request,
